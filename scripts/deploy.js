@@ -16,26 +16,26 @@ const main = async () => {
     await bitciContract.deployed();
     console.log("Contract deployed to:", bitciContract.address);
 
-    let txn;
-    // We only have three characters.
-    // an NFT w/ the character at index 2 of our array.
-    txn = await bitciContract.mintCharacterNFT(2);
-    await txn.wait();
+    // let txn;
+    // // We only have three characters.
+    // // an NFT w/ the character at index 2 of our array.
+    // txn = await bitciContract.mintCharacterNFT(2);
+    // await txn.wait();
 
-    // NFT for Boss
-    let txn_Boss;
-    txn_Boss = await bitciContract.mintCharacterNFT(2);
-    await txn_Boss.wait();
+    // // NFT for Boss
+    // let txn_Boss;
+    // txn_Boss = await bitciContract.mintCharacterNFT(2);
+    // await txn_Boss.wait();
 
-    txn_Boss = await bitciContract.attackBoss();
-    await txn_Boss.wait();
+    // txn_Boss = await bitciContract.attackBoss();
+    // await txn_Boss.wait();
 
-    txn_Boss = await bitciContract.attackBoss();
-    await txn_Boss.wait();
+    // txn_Boss = await bitciContract.attackBoss();
+    // await txn_Boss.wait();
     
-    // Get the value of the NFT's URI.
-    let returnedTokenUri = await bitciContract.tokenURI(1);
-    console.log("Token URI:", returnedTokenUri);
+    // // Get the value of the NFT's URI.
+    // let returnedTokenUri = await bitciContract.tokenURI(1);
+    // console.log("Token URI:", returnedTokenUri);
   };
   
   const runMain = async () => {
